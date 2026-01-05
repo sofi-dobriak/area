@@ -66,17 +66,16 @@ function initScrollAnimation() {
       scrollTrigger: {
         trigger: element,
         start: 'top 95%',
-        end: 'bottom center',
+        end: 'bottom top',
         toggleActions: 'play none none reverse',
         fastScrollEnd: true,
         preventOverlaps: true,
         markers: true,
-        scrub: 1,
       },
       duration: 1,
       y: 100,
       opacity: 0,
-      ease: 'power4.inOut',
+      ease: 'sine.inOut',
     });
   });
 }

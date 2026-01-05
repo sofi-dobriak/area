@@ -1,7 +1,7 @@
 section.discover.container
   .discover__container
-    h2.discover__title See the Big Picture
-    p.discover__description Area turns your data into clear, vibrant visuals that show you exactly what's happening in each region.
+    h2.discover__title(data-animate) See the Big Picture
+    p.discover__description(data-animate) Area turns your data into clear, vibrant visuals that show you exactly what's happening in each region.
 
     ol.discover__list
       li.discover__list__item(data-animate)
@@ -13,7 +13,8 @@ section.discover.container
       li.discover__list__item(data-animate)
         p.discover__list__item__text Your Global Snapshot: Get a quick, clear overview of your entire operation.
 
-    a.discover__link(href="https://www.figma.com/sites/?fuid=1108818761824813856", target="_blank", rel="noopener noreferrer" aria-label="Link for opening figma site", data-animate) Discover More
+    .discover__link-container(data-animate)
+      a.discover__link(href="https://www.figma.com/sites/?fuid=1108818761824813856", target="_blank", rel="noopener noreferrer" aria-label="Link for opening figma site") Discover More
 
   .discover__img-container
     img.discover__img-container__img(src="/images/discover-section-img.jpg", alt="Image with cubic figures")
