@@ -67,6 +67,8 @@ function initScrollAnimation() {
         trigger: element,
         start: 'top 90%',
         toggleActions: 'play none none reverse',
+        fastScrollEnd: true,
+        preventOverlaps: true,
       },
       duration: 1,
       y: 100,
