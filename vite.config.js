@@ -4,6 +4,10 @@ import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 import SortCss from 'postcss-sort-media-queries';
 import pugPlugin from '@macropygia/vite-plugin-pug-static';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig(({ command }) => {
   return {
@@ -14,7 +18,9 @@ export default defineConfig(({ command }) => {
     build: {
       sourcemap: true,
       rollupOptions: {
-        input: glob.sync('./src/*.pug'),
+        input: {
+          main: path.resolve(__dirname, 'src/index.pug'),
+        },
         output: {
           manualChunks(id) {
             if (id.includes('node_modules')) {
