@@ -68,8 +68,6 @@ function initScrollAnimation() {
         start: 'top 90%',
         end: 'bottom top',
         toggleActions: 'play none none reverse',
-        fastScrollEnd: true,
-        preventOverlaps: true,
         markers: false,
       },
       duration: 0.75,
