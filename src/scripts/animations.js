@@ -15,7 +15,7 @@ const refs = {
   heroTitle: document.querySelector('[data-hero-title]'),
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
   initHeroAnimation();
   initScrollAnimation();
   intiImageParallax();
@@ -84,7 +84,6 @@ function intiImageParallax() {
         start: 'top bottom',
         end: 'bottom top',
         scrub: 1,
-        markers: true,
       },
     }
   );
