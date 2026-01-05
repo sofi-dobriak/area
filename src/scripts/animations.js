@@ -65,12 +65,13 @@ function initScrollAnimation() {
     gsap.from(element, {
       scrollTrigger: {
         trigger: element,
-        start: 'top bottom',
+        start: 'top 95%',
         end: 'bottom center',
         toggleActions: 'play none none reverse',
         fastScrollEnd: true,
         preventOverlaps: true,
         markers: true,
+        scrub: 1,
       },
       duration: 1,
       y: 100,
