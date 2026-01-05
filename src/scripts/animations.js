@@ -18,6 +18,7 @@ const refs = {
 document.addEventListener('DOMContentLoaded', () => {
   initHeroAnimation();
   initScrollAnimation();
+  intiImageParallax();
   initMobileMenu();
 });
 
@@ -33,6 +34,60 @@ function initMobileMenu() {
     const link = e.target.closest('a');
     if (link) hideMobileMenu();
   });
+}
+
+function intiImageParallax() {
+  gsap.fromTo(
+    '[data-hero-image]',
+    {
+      y: 0,
+    },
+    {
+      y: -150,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 1,
+      },
+    }
+  );
+
+  gsap.fromTo(
+    '.benefits__img-container__img',
+    {
+      y: 0,
+    },
+    {
+      y: -150,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.benefits__list',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 1,
+      },
+    }
+  );
+
+  gsap.fromTo(
+    '.contacts__img-container__img',
+    {
+      y: 0,
+    },
+    {
+      y: -150,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.contacts__img-container',
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 1,
+        markers: true,
+      },
+    }
+  );
 }
 
 function initHeroAnimation() {
@@ -52,27 +107,10 @@ function initHeroAnimation() {
       {
         duration: 1.5,
         y: 250,
-        opacity: 0,
+        opacity: 1,
       },
       '-=1.5'
     );
-
-  gsap.fromTo(
-    '[data-hero-image]',
-    {
-      y: 0,
-    },
-    {
-      y: -150,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.hero',
-        start: 'top top',
-        end: 'bottom top',
-        scrub: 1,
-      },
-    }
-  );
 }
 
 function initScrollAnimation() {

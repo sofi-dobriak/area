@@ -6,26 +6,32 @@
   }
 
   &__img-container {
+    position: relative;
     overflow: hidden;
     border-radius: 30px;
-    margin-bottom: 40px;
+    aspect-ratio: 340/600;
+    margin-bottom: 50px;
+    width: 100%;
+
+    @include tablet {
+      aspect-ratio: 720/664;
+      max-height: 664px;
+    }
+
+    @include laptop {
+      aspect-ratio: 1200/664;
+    }
 
     &__img {
+      position: absolute;
+      top: 0;
+      left: 0;
       display: block;
       width: 100%;
-      height: 100%;
-      object-position: center;
+      height: 110%;
       object-fit: cover;
-      aspect-ratio: 340/600;
-
-      @include tablet {
-        aspect-ratio: 720/664;
-        max-height: 664px;
-      }
-
-      @include laptop {
-        aspect-ratio: 1200/664;
-      }
+      object-position: center;
+      border-radius: 30px;
     }
   }
 
