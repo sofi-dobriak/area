@@ -1,7 +1,7 @@
 doctype html
 head
   meta(charset='UTF-8')
-  link(rel='icon' type='image/svg+xml' href='')
+  link(rel='icon' type='image/svg+xml' href='/images/logo.svg')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title Area product lunch
   link(rel='stylesheet' href='./css/styles.scss')
@@ -10,7 +10,14 @@ body
   include ./partials/components/header.pug
 
   main
-    h1 WORK
+    include ./partials/sections/hero.pug
+    include ./partials/sections/benefits.pug
+    include ./partials/sections/discover.pug
+    include ./partials/sections/specification.pug
+    include ./partials/sections/quotes.pug
+    include ./partials/sections/map.pug
+    include ./partials/sections/contacts.pug
 
   include ./partials/components/footer.pug
+
   script(type='module' src='./main.js')

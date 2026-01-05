@@ -1,0 +1,122 @@
+.specs {
+  padding-top: 80px;
+  padding-bottom: 120px;
+  border-top: 1px solid $main-border-color;
+
+  &__label {
+    @include label-text;
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    @include section-title;
+    text-align: center;
+
+    margin: 0 auto 30px;
+    max-width: 340px;
+
+    @include tablet {
+      margin-bottom: 40px;
+      max-width: 560px;
+    }
+
+    @include laptop {
+      max-width: 720px;
+    }
+  }
+
+  &__description {
+    @include general-text;
+    text-align: center;
+    margin: 0 auto 30px;
+    max-width: 340px;
+
+    @include tablet {
+      margin-bottom: 40px;
+      max-width: 560px;
+    }
+
+    @include laptop {
+      max-width: 720px;
+    }
+  }
+
+  &__link {
+    @include link-text;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 100px;
+
+    border-radius: 1000px;
+    width: 138px;
+    height: 48px;
+    background: $main-button-bg-color;
+
+    transition: all 0.25s ease-in;
+
+    &:hover {
+      background-color: $secondary-button-bg-color;
+      color: $main-text-color-light;
+    }
+  }
+
+  &__list {
+    display: grid;
+
+    &__item {
+      width: 100%;
+      border: 1px solid transparent;
+      transition: all 0.25s ease-in;
+      cursor: text;
+
+      &:hover {
+        box-shadow: 0 2px 8px 0 $main-box-shadow;
+        border-color: $main-border-color;
+        border-radius: 20px;
+
+        .specs__sublist__item:last-child {
+          border-radius: 0 0 20px 20px;
+        }
+      }
+
+      &__title {
+        @include table-title;
+        text-align: center;
+        padding: 40px;
+        border-bottom: 2px solid $secondary-border-color;
+      }
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__sublist {
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 32px;
+      border-bottom: 1px solid $main-border-color;
+      transition: all 0.25s ease-in;
+
+      @media screen and (min-width: 540px) {
+        border-right: 1px solid $main-border-color;
+      }
+
+      &__text {
+        @include label-text;
+        color: $main-text-color-dark;
+      }
+    }
+  }
+}

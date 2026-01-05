@@ -1,0 +1,80 @@
+.quotes {
+  padding-bottom: 100px;
+
+  @include tablet {
+    padding-bottom: 120px;
+  }
+
+  @include laptop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  &__img-container {
+    overflow: hidden;
+    border-radius: 30px;
+    margin-bottom: 40px;
+
+    @include laptop {
+      margin-bottom: 0;
+    }
+
+    &__img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      aspect-ratio: 340/340;
+
+      @include tablet {
+        aspect-ratio: 720/720;
+        max-height: 720px;
+      }
+
+      @include laptop {
+        aspect-ratio: 590/670;
+        max-height: 670px;
+      }
+    }
+  }
+
+  &__text-container {
+    flex-shrink: 4;
+  }
+
+  &__text {
+    @include quote-text;
+    padding-top: 40px;
+    border-top: 1px solid $main-border-color;
+    margin-bottom: 50px;
+
+    @include laptop {
+      padding-top: unset;
+      border-top: none;
+      max-width: unset;
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    @include laptop {
+      flex-direction: column;
+      align-items: start;
+    }
+
+    &__name {
+      @include general-text;
+      color: $main-text-color-dark;
+    }
+
+    &__position {
+      @include label-text;
+    }
+  }
+}

@@ -43,14 +43,17 @@
     url('/fonts/crimson-text-v19-latin-regular.woff2') format('woff2');
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-width: 100vw;
-  min-height: 100vh;
-  margin: 0;
+::selection {
+  background-color: #000000;
+  color: #ffffff;
 }
 
-main {
-  flex-grow: 1;
+::-moz-selection {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }

@@ -1,0 +1,86 @@
+.map {
+  padding-bottom: 100px;
+
+  @include tablet {
+    padding-bottom: 120px;
+  }
+
+  &__title-link-container {
+    margin-bottom: 80px;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__title {
+      @include section-title;
+      margin-bottom: 40px;
+
+      @include tablet {
+        margin-bottom: 0;
+      }
+    }
+
+    &__link {
+      @include link-text;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1000px;
+      width: 138px;
+      height: 48px;
+      background: $main-button-bg-color;
+
+      transition: all 0.25s ease-in;
+
+      &:hover {
+        background-color: $secondary-button-bg-color;
+        color: $main-text-color-light;
+      }
+
+      @include tablet {
+        margin: unset;
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    counter-reset: map;
+    display: grid;
+    gap: 50px;
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__item {
+      padding-top: 60px;
+      counter-increment: map;
+      border-top: 1px solid $main-border-color;
+
+      &::before {
+        content: counter(map, decimal-leading-zero);
+        @include general-text;
+        font-weight: 400;
+        font-size: 80px;
+        line-height: 100%;
+        letter-spacing: -0.04em;
+        color: #929292;
+      }
+
+      &__title {
+        @include item-title;
+        margin-bottom: 20px;
+        margin-top: 60px;
+      }
+
+      &__text {
+        @include general-text;
+      }
+    }
+  }
+}
