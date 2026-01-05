@@ -56,6 +56,23 @@ function initHeroAnimation() {
       },
       '-=1.5'
     );
+
+  gsap.fromTo(
+    '[data-hero-image]',
+    {
+      y: 0,
+    },
+    {
+      y: -150,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 1,
+      },
+    }
+  );
 }
 
 function initScrollAnimation() {

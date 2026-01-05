@@ -1,9 +1,14 @@
 section.hero.container
-   h1.hero__title(data-hero-title) Browse<br> everything
-   picture
-     source(srcset="/images/desk-hero.jpg" media="(min-width:1280px)")
-     source(srcset="/images/tab-hero.jpg" media="(min-width:768px)")
-     img.hero__image(src="/images/mob-hero.jpg", alt="Image with phone" width="340", data-hero-image)
+
+
+   .hero__picture-container
+      h1.hero__title(data-hero-title) Browse<br> everything
+
+      .hero__picture-container__bg
+      picture
+        source(srcset="/images/desk-hero.png" media="(min-width:1280px)")
+        source(srcset="/images/desk-hero.png" media="(min-width:768px)")
+        img.hero__picture-container__image(src="/images/mob-hero.png", alt="Image with phone" width="340", data-hero-image)
 
    h2.hero__logos__title(data-animate) Trusted by:
    ul.hero__logos__list(data-animate)
