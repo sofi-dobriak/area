@@ -4,9 +4,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "pug": "node scripts/compile-pug.js",
-    "dev": "npm run pug && vite",
-    "build": "npm run pug && vite build",
+    "dev": "vite",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
