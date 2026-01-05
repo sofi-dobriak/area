@@ -1,0 +1,185 @@
+@mixin tablet() {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin laptop() {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin laptop-header() {
+  @media screen and (min-width: 1500px) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media screen and (min-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin main-title() {
+  font-family: $tertiary-font;
+  font-weight: 400;
+  font-size: 76px;
+  line-height: 85%;
+  letter-spacing: -0.04em;
+  color: $main-text-color-dark;
+  font-style: normal;
+  text-decoration: none;
+
+  @include tablet {
+    font-size: 140px;
+    line-height: 80%;
+    letter-spacing: -0.05em;
+  }
+
+  @include laptop {
+    font-size: vw(160);
+    line-height: 85%;
+  }
+}
+
+@mixin section-title() {
+  font-family: $tertiary-font;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 95%;
+  letter-spacing: -0.03em;
+  color: $main-text-color-dark;
+  font-style: normal;
+  text-decoration: none;
+
+  @include tablet {
+    font-size: 54px;
+    line-height: 90%;
+  }
+
+  @include laptop {
+    font-size: vw(60);
+  }
+}
+
+@mixin item-title() {
+  font-family: $tertiary-font;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  color: $main-text-color-dark;
+  font-style: normal;
+  text-decoration: none;
+}
+
+@mixin general-text() {
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: $secondary-text-color;
+  font-style: normal;
+  text-decoration: none;
+}
+
+@mixin label-text() {
+  font-family: $default-font;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 140%;
+  letter-spacing: -0.03em;
+  color: $accent-text-color;
+  font-style: normal;
+  text-decoration: none;
+
+  @include tablet {
+    font-size: 11px;
+    letter-spacing: -0.01em;
+  }
+
+  @include laptop {
+    font-size: 12px;
+  }
+}
+
+@mixin button-text() {
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: -0.03em;
+  text-align: center;
+  color: $main-text-color-light;
+  font-style: normal;
+  text-decoration: none;
+}
+
+@mixin link-text() {
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: -0.03em;
+  text-align: center;
+  color: $main-text-color-dark;
+}
+
+@mixin logo-text() {
+  font-family: $secondary-font;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 120%;
+  letter-spacing: -0.08em;
+  color: $main-text-color-dark;
+
+  @include tablet {
+    letter-spacing: -0.05em;
+  }
+}
+
+@mixin table-title() {
+  font-family: $secondary-font;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 120%;
+  letter-spacing: -0.08em;
+  color: $secondary-text-color;
+}
+
+@mixin quote-text() {
+  font-family: $tertiary-font;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: -0.04em;
+  color: $main-text-color-dark;
+
+  @include tablet {
+    font-size: 40px;
+  }
+
+  @include laptop {
+    line-height: 105%;
+  }
+}
+
+@mixin counter-text() {
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+  color: $tertiary-text-color;
+
+  @include tablet {
+    font-size: 80px;
+  }
+}
+
+@function vw($px) {
+  @return ($px / 1920) * 100vw;
+}

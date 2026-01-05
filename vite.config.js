@@ -3,6 +3,7 @@ import { glob } from 'glob';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 import SortCss from 'postcss-sort-media-queries';
+import pugPlugin from '@macropygia/vite-plugin-pug-static';
 
 export default defineConfig(({ command }) => {
   return {
@@ -38,8 +39,12 @@ export default defineConfig(({ command }) => {
       emptyOutDir: true,
     },
     plugins: [
+      pugPlugin({
+        buildLocals: {},
+        serveLocals: {},
+      }),
       injectHTML(),
-      FullReload(['./src/**/**.html']),
+      FullReload(['./src/**/**.html', './src/**/**.pug']),
       SortCss({
         sort: 'mobile-first',
       }),

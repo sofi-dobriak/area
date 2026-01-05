@@ -1,0 +1,220 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-shadow: 0 2px 4px 0 $secondary-border-color;
+  background-color: $main-bg-color;
+  border-radius: 0 0 20px 20px;
+
+  @include tablet {
+    box-shadow: none;
+    border-radius: none;
+  }
+
+  &__logo {
+    @include logo-text;
+    padding: 20px 0;
+  }
+
+  &__list {
+    display: none;
+    align-items: center;
+    gap: 28px;
+
+    &__item {
+      position: relative;
+      overflow: hidden;
+
+      &__link {
+        @include link-text;
+        padding: 20px 0;
+
+        .real,
+        .fake {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          transition: transform 0.4s ease-in-out;
+        }
+
+        .fake {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translateY(-105%);
+          transition: all 0.4s ease-in-out;
+          color: $accent-text-color;
+        }
+
+        &:hover {
+          .fake {
+            transform: translateY(0%);
+          }
+
+          .real {
+            transform: translateY(105%);
+          }
+        }
+      }
+    }
+
+    @include tablet {
+      display: flex;
+      border-radius: 100px;
+      backdrop-filter: blur(30px);
+      background-color: $header-bg;
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 20px;
+      width: 400px;
+      z-index: 999;
+    }
+  }
+
+  &__link {
+    @include button-text;
+
+    background-color: $secondary-button-bg-color;
+    border-radius: 1000px;
+    width: 128px;
+    height: 48px;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    transition: background-color 0.25s ease-in;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $main-hover-bg-color;
+
+      svg {
+        margin-bottom: 16px;
+      }
+    }
+
+    svg {
+      fill: $secondary-icons-color;
+      transition: margin-bottom 0.25s ease-in;
+    }
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__burger-btn,
+  &__close-btn {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    transform: rotate(0deg);
+    transition: all 0.3s ease-in-out;
+
+    &.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+
+      &.header__burger-btn {
+        transform: rotate(-90deg);
+      }
+      &.header__close-btn {
+        transform: rotate(90deg);
+      }
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s, visibility 0.25s;
+
+  &.visible {
+    visibility: visible;
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  width: 100%;
+  background-color: $main-bg-color;
+  box-shadow: 0 2px 4px 0 $secondary-border-color;
+  border-radius: 0 0 20px 20px;
+  max-height: 0;
+  overflow: hidden;
+  top: 65px;
+  padding: 0 20px;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: all 0.25s ease-in-out;
+
+  &.visible {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+
+    max-height: 502px;
+    padding: 50px 20px 32px 20px;
+  }
+
+  &__list {
+    margin-bottom: 50px;
+
+    &__item {
+      &__link {
+        @include link-text;
+        border-top: 1px solid $main-border-color;
+        padding: 30px 0;
+        display: block;
+        text-align: start;
+      }
+    }
+  }
+
+  &__link {
+    @include button-text;
+
+    background-color: $secondary-button-bg-color;
+    border-radius: 1000px;
+    width: 128px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+
+    svg {
+      fill: $secondary-icons-color;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+header.header.container
+  a.header__logo(href="/" rel="noopener noreferrer" aria-label="Link to home section") Area
+
+  ul.header__list
+    li.header__list__item
+      a.header__list__item__link(href="#benefits", rel="noopener noreferrer" aria-label="Link to Benefits section")
+        span.real Benefits
+        span.fake Benefits
+    li.header__list__item
+      a.header__list__item__link(href="#specifications", rel="noopener noreferrer" aria-label="Link to Specifications section")
+        span.real Specifications
+        span.fake Specifications
+    li.header__list__item
+      a.header__list__item__link(href="#how-to", rel="noopener noreferrer" aria-label="Link to How-to section")
+        span.real How-to
+        span.fake How-to
+    li.header__list__item
+      a.header__list__item__link(href="#contact-us", rel="noopener noreferrer" aria-label="Link to Contact Us section")
+        span.real Contact Us
+        span.fake Contact Us
+
+  a.header__link(href="https://www.figma.com/sites/?fuid=1108818761824813856" rel="noopener noreferrer" target="_blank"
+    aria-label="Link for opening figma site") Learn More
+    svg(width="8" height="8")
+      use(href="/images/sprite.svg#icon-arrow")
+
+  button.header__burger-btn(type="button" arial-label="Button for opening mobile menu" data-open-menu-btn)
+    svg(width="24" height="24")
+      use(href="/images/sprite.svg#icon-burger")
+  button.header__close-btn.hidden(type="button" arial-label="Button for opening mobile menu" data-close-menu-btn)
+    svg(width="24" height="24")
+      use(href="/images/sprite.svg#icon-close")
+
+  .wrapper(data-mobile-wrapper)
+    .mobile-menu(data-mobile-menu)
+      ul.mobile-menu__list(data-mobile-menu-list)
+        li.mobile-menu__list__item
+          a.mobile-menu__list__item__link(href="#benefits") Benefits
+        li.mobile-menu__list__item
+          a.mobile-menu__list__item__link(href="#specifications") Specifications
+        li.mobile-menu__list__item
+          a.mobile-menu__list__item__link(href="#how-to") How-to
+        li.mobile-menu__list__item
+          a.mobile-menu__list__item__link(href="#contact-us") Contact Us
+
+      a.mobile-menu__link(href="https://www.figma.com/sites/?fuid=1108818761824813856" rel="noopener noreferrer"
+      target="_blank" aria-label="Link for opening figma site") Learn More
+        svg(width="8" height="8")
+          use(href="/src/img/sprite.svg#icon-arrow")
