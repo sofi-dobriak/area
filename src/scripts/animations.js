@@ -65,15 +65,17 @@ function initScrollAnimation() {
     gsap.from(element, {
       scrollTrigger: {
         trigger: element,
-        start: 'top 90%',
+        start: 'top bottom',
+        end: 'bottom center',
         toggleActions: 'play none none reverse',
         fastScrollEnd: true,
         preventOverlaps: true,
+        markers: true,
       },
       duration: 1,
       y: 100,
       opacity: 0,
-      ease: 'power3.out',
+      ease: 'power4.inOut',
     });
   });
 }

@@ -83,7 +83,7 @@
     }
 
     @include laptop {
-      margin-bottom: none;
+      margin-bottom: unset;
     }
   }
 
