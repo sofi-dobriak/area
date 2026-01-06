@@ -53,40 +53,6 @@ function intiImageParallax() {
       },
     }
   );
-
-  gsap.fromTo(
-    '.benefits__img-container__img',
-    {
-      y: 0,
-    },
-    {
-      y: -150,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.benefits__list',
-        start: 'top top',
-        end: 'bottom top',
-        scrub: 1,
-      },
-    }
-  );
-
-  gsap.fromTo(
-    '.contacts__img-container__img',
-    {
-      y: 0,
-    },
-    {
-      y: -150,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.contacts__img-container',
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: 1,
-      },
-    }
-  );
 }
 
 function initHeroAnimation() {
@@ -96,17 +62,20 @@ function initHeroAnimation() {
   });
 
   timeline
+    .set('.hero__picture-container', { autoAlpha: 1 })
     .from(splitHeroTitle.chars, {
       duration: 1,
       autoAlpha: 0,
       stagger: 0.05,
     })
+    .from('[data-hero-bg]', { opacity: 0, duration: 1.5 }, '<')
     .from(
       '[data-hero-image]',
       {
         duration: 1.5,
         y: 250,
-        opacity: 1,
+        xPercent: -50,
+        autoAlpha: 0,
       },
       '-=1.5'
     );

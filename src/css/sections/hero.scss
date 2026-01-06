@@ -23,6 +23,8 @@
   &__picture-container {
     overflow: hidden;
     position: relative;
+    opacity: 0;
+    visibility: hidden;
 
     margin-bottom: 50px;
 
