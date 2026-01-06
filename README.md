@@ -23,14 +23,6 @@ It uses Pug for templating, SCSS for styling, and Vite for fast builds and hot r
 
 ---
 
-- 🔗 Routing:
-  - `/` — Home page
-  - `/teachers` — Teachers page
-  - `/favorites` — Favorites page (private)
-  - `*` — Not Found Page
-
----
-
 ## 🛠️ Tech Stack
   - ⚡ Vite
   - 📝 Pug
