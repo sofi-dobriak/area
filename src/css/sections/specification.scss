@@ -60,7 +60,7 @@
     height: 48px;
     background: $main-button-bg-color;
 
-    transition: all 0.25s ease-in;
+    transition: all 0.25s ease-in-out;
 
     &:hover {
       background-color: $secondary-button-bg-color;
@@ -74,7 +74,7 @@
     &__item {
       width: 100%;
       border: 1px solid transparent;
-      transition: all 0.25s ease-in;
+      transition: all 0.25s ease-in-out;
       cursor: text;
 
       &:hover {
@@ -107,7 +107,7 @@
       gap: 8px;
       padding: 28px;
       border-bottom: 1px solid $main-border-color;
-      transition: all 0.25s ease-in;
+      transition: all 0.25s ease-in-out;
 
       @media screen and (min-width: 540px) {
         border-right: 1px solid $main-border-color;

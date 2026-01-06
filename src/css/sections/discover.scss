@@ -71,7 +71,7 @@
     width: 138px;
     height: 48px;
     background: $main-button-bg-color;
-    transition: all 0.25s ease-in;
+    transition: all 0.25s ease-in-out;
 
     &:hover {
       background-color: $secondary-button-bg-color;

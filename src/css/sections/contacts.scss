@@ -66,7 +66,7 @@
     gap: 2px;
     margin: auto;
 
-    transition: background-color 0.25s ease-in;
+    transition: background-color 0.25s ease-in-out;
     cursor: pointer;
 
     &:hover {
@@ -79,7 +79,7 @@
 
     svg {
       fill: $secondary-icons-color;
-      transition: margin-bottom 0.25s ease-in;
+      transition: margin-bottom 0.25s ease-in-out;
     }
   }
 }
