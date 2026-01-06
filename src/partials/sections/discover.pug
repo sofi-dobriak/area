@@ -17,4 +17,7 @@ section.discover.container
       a.discover__link(href="https://www.figma.com/sites/?fuid=1108818761824813856", target="_blank", rel="noopener noreferrer" aria-label="Link for opening figma site") Discover More
 
   .discover__img-container
-    img.discover__img-container__img(src="/images/discover-section-img.jpg", alt="Image with cubic figures")
+    picture
+      source(srcset="/images/discover-section-img.webp" media="(min-width:320px)" type="image/webp")
+      source(srcset="/images/discover-section-img.jpg" media="(min-width:320px)" type="image/jpg")
+      img.discover__img-container__img(src="/images/discover-section-img.jpg", alt="Image with mountains" loading="lazy")

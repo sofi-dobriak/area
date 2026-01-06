@@ -30,4 +30,7 @@ section.benefits.container(id="benefits", data-animate)
       p.benefits__list__item__text Generate precise, visually compelling reports that illustrate your growth trajectories across all regions.
 
   .benefits__img-container(data-animate)
-    img.benefits__img-container__img(src="/images/benefit-section-img.jpg", alt="Image with mountains")
+    picture
+      source(srcset="/images/benefit-section-img.webp" media="(min-width:320px)" type="image/webp")
+      source(srcset="/images/benefit-section-img.jpg" media="(min-width:320px)" type="image/jpg")
+      img.benefits__img-container__img(src="/images/benefit-section-img.jpg", alt="Image with mountains" loading="lazy")

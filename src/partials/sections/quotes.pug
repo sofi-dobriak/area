@@ -1,6 +1,10 @@
 section.quotes.container
   .quotes__img-container(data-animate)
-    img.quotes__img-container__img(src="/images/quote-section-img.jpg", alt="Geometric composition")
+    picture
+      source(srcset="/images/quote-section-img.webp" media="(min-width:320px)" type="image/webp")
+      source(srcset="/images/quote-section-img.jpg" media="(min-width:320px)" type="image/jpg")
+      img.quotes__img-container__img(src="/images/quote-section-img.jpg", alt="Geometric composition" loading="lazy")
+
 
   .quotes__text-container(data-animate)
     p.quotes__text &quot;I was skeptical, but Area has completely transformed the way I manage my business. The data visualizations are so clear and intuitive, and the platform is so easy to use. I can&apos;t imagine running my company without it.&quot;

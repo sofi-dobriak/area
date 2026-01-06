@@ -4,21 +4,22 @@ section.hero.container
 
       .hero__picture-container__bg(data-hero-bg)
       picture
-        source(srcset="/images/desk-hero.png" media="(min-width:1280px)" type="image/png")
+        source(srcset="/images/desk-hero.webp" media="(min-width:1280px)" type="image/webp")
         source(srcset="/images/desk-hero.png" media="(min-width:768px)" type="image/png")
+        source(srcset="/images/mob-hero.webp" media="(max-width:767px)" type="image/webp")
         img.hero__picture-container__image(src="/images/mob-hero.png", alt="Image with phone" data-hero-image)
 
    h2.hero__logos__title(data-animate) Trusted by:
    ul.hero__logos__list(data-animate)
      li.hero__logos__item
-       img.hero__logos__item__image(src="/images/logos/logo-1.svg", alt="Logo image" width="150")
+       img.hero__logos__item__image(src="/images/logos/logo-1.svg", alt="Logo image" width="150" loading="lazy")
      li.hero__logos__item
-       img.hero__logos__item__image(src="/images/logos/logo-2.svg", alt="Logo image" width="150")
+       img.hero__logos__item__image(src="/images/logos/logo-2.svg", alt="Logo image" width="150" loading="lazy")
      li.hero__logos__item
-       img.hero__logos__item__image(src="/images/logos/logo-3.svg", alt="Logo image" width="150")
+       img.hero__logos__item__image(src="/images/logos/logo-3.svg", alt="Logo image" width="150" loading="lazy")
      li.hero__logos__item
-       img.hero__logos__item__image(src="/images/logos/logo-4.svg", alt="Logo image" width="150")
+       img.hero__logos__item__image(src="/images/logos/logo-4.svg", alt="Logo image" width="150" loading="lazy")
      li.hero__logos__item
-       img.hero__logos__item__image(src="/images/logos/logo-5.svg", alt="Logo image" width="150")
+       img.hero__logos__item__image(src="/images/logos/logo-5.svg", alt="Logo image" width="150" loading="lazy")
      li.hero__logos__item
-       img.hero__logos__item__image(src="/images/logos/logo-6.svg", alt="Logo image" width="150")
+       img.hero__logos__item__image(src="/images/logos/logo-6.svg", alt="Logo image" width="150" loading="lazy")
