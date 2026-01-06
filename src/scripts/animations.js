@@ -68,13 +68,12 @@ function initHeroAnimation() {
       autoAlpha: 0,
       stagger: 0.05,
     })
-    .from('[data-hero-bg]', { opacity: 0, duration: 1.5 }, '<')
     .from(
-      '[data-hero-image]',
+      '[data-hero-image], [data-hero-bg]',
       {
         duration: 1.5,
         y: 250,
-        xPercent: -50,
+        stagger: 0.1,
         autoAlpha: 0,
       },
       '-=1.5'
