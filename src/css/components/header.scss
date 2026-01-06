@@ -29,6 +29,7 @@
       &__link {
         @include link-text;
         padding: 20px 0;
+        min-width: 150px;
 
         .real,
         .fake {
@@ -205,7 +206,7 @@
 
     background-color: $secondary-button-bg-color;
     border-radius: 1000px;
-    width: 128px;
+    width: 150px;
     height: 48px;
 
     display: flex;
