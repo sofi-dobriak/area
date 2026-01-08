@@ -53,5 +53,4 @@ It uses Pug for templating, SCSS for styling, and Vite for fast builds and hot r
 ---
 
 👩‍💻 Author: Sofi Dobriak
--> Frontend Developer
 
