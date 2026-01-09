@@ -52,6 +52,13 @@ It uses Pug for templating, SCSS for styling, and Vite for fast builds and hot r
 
 ---
 
+## 💻 My other projects
+
+### 💍 Charming Wedding — Promo Page
+[Demo](https://charming-wedding.vercel.app/) |
+[Github](https://github.com/sofi-dobriak/charming-wedding)
+
+---
+
 👩‍💻 Author: Sofi Dobriak
--> Frontend Developer
 
